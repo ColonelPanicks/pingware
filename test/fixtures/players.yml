@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rank: 1
+  skill: 1.5
+  wins: 1
+  losses: 1
+
+two:
+  name: MyString
+  rank: 1
+  skill: 1.5
+  wins: 1
+  losses: 1
