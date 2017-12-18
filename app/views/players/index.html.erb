@@ -1,0 +1,8 @@
+The following players exist in the db<br />
+<% if !@players.blank? %>
+    <% for item in @players %>
+        <%= item.name %><br />
+    <% end %>
+<% else %>
+NONE - it's completely empty
+<% end %>
