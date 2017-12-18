@@ -1,0 +1,15 @@
+Enter the name of the new player
+<hr>
+<%= form_for @player do |f| -%>
+    Player Name: <%= f.text_field :name %><br />
+    <%= f.submit %><br />
+<% end -%>
+<hr>
+The following players exist in the db<br />
+<% if !@players.blank? %>
+    <% for item in @players %>
+        <%= item.name %><br />
+    <% end %>
+<% else %>
+
+<% end %>
