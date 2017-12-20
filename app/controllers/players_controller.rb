@@ -12,6 +12,10 @@ class PlayersController < ApplicationController
     end
   end
 
+  def index
+    @players = Player.all
+  end
+
   private
   def player_params
     # Set the allowed attributes on the :player object (coming from /players/new)
