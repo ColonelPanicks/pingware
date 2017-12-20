@@ -1,2 +1,11 @@
 <h1>Leaderboard#index</h1>
 <p>Find me in app/views/leaderboard/index.html.erb</p>
+<hr>
+I know all the players, they are:<br />
+<% if !@players.blank? %>
+    <% for item in @players %>
+        <%= item.name %><br />
+    <% end %>
+<% else %>
+NONE - it's completely empty
+<% end %>
