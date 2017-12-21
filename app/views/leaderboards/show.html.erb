@@ -1,11 +1,24 @@
-<h1>Leaderboard#index</h1>
-<p>Find me in app/views/leaderboard/index.html.erb</p>
-<hr>
-Players in system:<br />
-<% if !@players.blank? %>
-    <% for item in @players %>
-        <%= item.name %><br />
+<h1>Leaderboard</h1>
+<table class="sortable">
+    <thead>
+    <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Skill</th>
+    </tr>
+    </thead>
+    <% if !@players.blank? %>
+    <% @players.each do |player| %>
+    <tr>
+        <td><%= player.rank %></td>
+        <td><%= player.name %></td>
+        <td><%= player.wins %></td>
+        <td><%= player.losses %></td>
+        <td><%= player.skill %></td>
+    </tr>
     <% end %>
-<% else %>
-NONE - It's completely empty in the database (or something is setup wrong!)
-<% end %>
+    <% end %>
+</table>
+
