@@ -1,5 +1,7 @@
 class LeaderboardController < ApplicationController
+
   def index
-    @players = Players.new.all
+    @players = Player.all
   end
+
 end
