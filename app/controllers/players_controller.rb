@@ -7,9 +7,13 @@ class PlayersController < ApplicationController
   def create
     # Run the player_params function to properly pass the attributes
     @player = Player.new(player_params)
+    # If the save is successful redirect back to the leaderboard
     if @player.save
-      redirect_to new_player_path
+      redirect_to leaderboard_path
     end
+  end
+
+  def show
   end
 
   def index
